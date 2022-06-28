@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+        .stick{
+            display: none;
+        }
+        .navbar {
+            /* height: 60px; */
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .biglogo  {
+            padding: 5px 0 0 50px;
+            width: 150px;
+            height: auto;
+        }
+
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 30px;
+        }
+
+        .navbar ul li {
+            background: #000;
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            display: block;
+            padding: 0 15px;
+            color: #fff;
+            line-height: 60px;
+            font-size: 18px;
+        }
+
+        .navbar ul li a:hover {
+            background: #333;
+        }
+        
+        .navbar ul ul {
+            position: absolute;
+            top: 60px;
+            display: none;
+        }
+
+        .navbar ul li:hover>ul {
+            display: block;
+        }
+
+        .navbar ul ul li {
+            background: #111;
+            width: 200px;
+            float: none;
+            position: relative;
+            display: list-item;
+
+        }
+
+
+        @media (max-width: 1110px){
+            .stick{
+                display: block;
+            }
+            .myheader{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- -------------window screen navbar--------------  -->
+    <header class="myheader">
+
+        <!-- <div id="menu-btn" class="fas fa-bars"> </div> -->
+
+
+        <nav class="navbar">
+            <img class="biglogo" src="LOGO_VECTOR_WITH_COLOUR-1-removebg-preview.png" alt="">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us <span class="fa fa-caret-down "></span></a>
+                    <ul class="about_show">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Company Profile</a></li>
+                        <li><a href="#">Company History</a></li>
+                        <li><a href="#">Vission</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Corporate Video</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#">Services</a></li> -->
+                <li><a href="#">Products <span class="fa fa-caret-down "></span></a>
+                    <ul class="product_show">
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="#">Masterbatch</a></li>
+                        <li><a href="#">Filler</a></li>
+                        <li><a href="#">Modifiers</a></li>
+                        <li><a href="#">Compounds</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Awards & Certificates</a></li>
+                <li><a href="#">Our Teams</a></li>
+                <li><a href="Contact_page.html">Contact Us</a></li>
+                <li><a href="career.html">Career</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+
+    <!-- -------------navbar for screen max-width : 1110px-------------- -->
+     <!-- <header > -->
+  <section class="stick bg-trans zindex-sticky">
+
+    <section class="header-section ">
+      <a href="#" class="logo"><img src="LOGO_VECTOR_WITH_COLOUR-1-removebg-preview.png" alt=""></a>
+      <div class="menu-btn">
+        <span class="fas fa-bars"></span>
+      </div>
+    </section>
+
+
+    
+    <nav class="side_menu">
+      <a href="index.html" class="logo" style="padding: 15px;"><img src="LOGO_VECTOR_WITH_COLOUR-1-removebg-preview.png"
+          alt=""></a>
+      <section class="data">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="menulist-item dropme1">About Us <span class="fa fa-caret-down "></span>
+            <ul class="about_show">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Company Profile</a></li>
+              <li><a href="#">Company History</a></li>
+              <li><a href="#">Vission</a></li>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Infrastructure</a></li>
+              <li><a href="#">Corporate Video</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#">Services</a></li> -->
+          <li class="menulist-item dropme2">Products <span class="fa fa-caret-down "></span></a>
+            <ul class="product_show">
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="#">Masterbatch</a></li>
+              <li><a href="#">Filler</a></li>
+              <li><a href="#">Modifiers</a></li>
+              <li><a href="#">Compounds</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Awards & Certificates</a></li>
+          <li><a href="#">Our Teams</a></li>
+          <li><a href="Contact_page.html">Contact Us</a></li>
+          <li><a href="career.html">Career</a></li>
+        </ul>
+      </section>
+    </nav>
+  </section>
+    
+    <!-- </header> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+        $('.dropme1').click(function () {
+            $('nav ul .about_show').toggleClass("show");
+        });
+        $('.dropme2').click(function () {
+            $('nav ul .product_show').toggleClass("show");
+        });
+
+        $('.menu-btn').click(function () {
+            $(this).toggleClass('click');
+            $('.side_menu').toggleClass('show');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
